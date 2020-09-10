@@ -1,0 +1,32 @@
+header
+  nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+    a.navbar-brand(href="/") Geomatics LIVE
+    button.navbar-toggler(type="button"
+                          data-toggle="collapse"
+                          data-target="#navbarCollapse"
+                          aria-controls="navbarCollapse"
+                          aria-expanded="false"
+                          aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+
+    #navbarCollapse.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+
+      a.btn.btn-outline-primary(href="/register") iLIKE!
+  
+  img(src="images/index_cmi_head.png" border="1" alt="Mining, Environmental Management, Remote sensing" width="1585" height="200")
+
+  div(class="topnav" id="myTopnav")
+    a(href='/layout' class="active") Main
+    a(href='/worldview') World View
+    a(href='/satellite') Satellite
+    a(href='/pubartic') Published Article 
+    a(href='/main') Contact
+
+    div(class="search-container")
+      form(action="https://scholar.google.com/" method="get")
+        input(type="text" placeholder="Google Scholar Citation" name="search")
+        button(type="submit") 
+        i(class="fa fa-search")
+    a(href="javascript:void(0);" class="icon" onclick="myFunction()")
+      i(class="fa fa-bars")

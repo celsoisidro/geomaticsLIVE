@@ -1,0 +1,21 @@
+doctype html
+html
+
+head
+    link(rel="stylesheet" href="/stylesheets/style.css" type="text/css")
+
+body
+    div(class='overlay')
+        img(src='/images/sat_pleaides1a.png' alt='Satellite variants' style='width:500px;height:250px;')
+        div(class='firstbutton' style='width:80px;')
+            img(src='/images/button_purple.png' onclick="myFunction()")
+            span(class='popuptext' id='myPopup') List of available researches about this satellite
+        div(class='secondbutton' style='width:80px;')
+            img(src='/images/button_blue.png' onclick="myFunctionTwo()" )
+            span(class='popuptwotext' id='myPopuptwo') List of global projects/ organizations utilizing this satellite
+        div(class='thirdbutton' style='width:80px;')
+            img(src='/images/button_green.png' onclick="myFunctionThree()" )
+            span(class='popupthreetext' id='myPopupthree') List of field research categories applicable for this satellite
+        div(class='fourthbutton' style='width:80px;')
+            img(src='/images/button_red.png' onclick="myFunctionFour()" )
+            span(class='popupfourtext' id='myPopupfour') Sample images that have been taken by this satellite
