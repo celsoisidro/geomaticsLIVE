@@ -1,44 +1,63 @@
 require([
     "esri/Map",
     "esri/views/MapView",
+    "esri/widgets/BasemapToggle",
+    "esri/widgets/BasemapGallery",
     "esri/Graphic",
     "esri/layers/GraphicsLayer"
-], function(Map, MapView, Graphic, GraphicsLayer) {
+], function(Map, MapView, BasemapToggle, BasemapGallery, Graphic, GraphicsLayer) {
 
     var map = new Map({
-        basemap: "topo-vector"
+        basemap: "streets"
     });
 
     var view = new MapView({
         container: "viewDiv",
         map: map,
-        center: [-118.80543, 34.02700],
-        zoom: 13
+        center: [153.068085, -27.454992],
+        zoom: 12
     });
 
     var graphicsLayer = new GraphicsLayer();
     map.add(graphicsLayer);
 
-    // Create a point
-    var point = {
-        type: "point",
-        longitude: -118.80657463861,
-        latitude: 34.0005930608889
+    var polygon = {
+        type: "polygon",
+        rings: [
+            [-113.910954, 51.176148],
+            [-113.910954, 50.865474],
+            [-114.137833, 50.865474],
+            [-114.137833, 50.992233],
+            [-114.236128, 50.992233],
+            [-114.236128, 51.176148]
+        ]
     };
 
-    var simpleMarkerSymbol = {
-        type: "simple-marker",
-        color: [226, 119, 40], // orange
+    var simpleFillSymbol = {
+        type: "simple-fill",
+        color: [227, 139, 79, 0],
         outline: {
-            color: [255, 255, 255], // white
-            width: 1
+            color: [25, 55, 255],
+            width: 3
         }
     };
 
-    var pointGraphic = new Graphic({
-        geometry: point,
-        symbol: simpleMarkerSymbol
+    var polygonGraphic = new Graphic({
+        geometry: polygon,
+        symbol: simpleFillSymbol
     });
 
-    graphicsLayer.add(pointGraphic);
+    graphicsLayer.add(polygonGraphic);
+
+    var basemapGallery = new BasemapGallery({
+        view: view,
+        source: {
+            portal: {
+                url: "http://www.arcgis.com",
+                useVectorBasemaps: true,
+            },
+        }
+    });
+
+    view.ui.add(basemapGallery, "top-right");
 });

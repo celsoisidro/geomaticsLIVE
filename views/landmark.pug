@@ -1,8 +1,16 @@
 doctype html
 html
+    head    
+        include includes/head
+        include includes/header
+        link(rel="shortcut icon" href="/favicontwo.ico.jpg" type="image/x-icon")
+        
+        style
+            include ../public/stylesheets/worldview.css
 
-  include includes/head
-  include includes/header
-  link(rel="shortcut icon" href="/favicontwo.ico.jpg" type="image/x-icon")
+    body
+        div(id="viewDiv")
+        script
+            include ../public/javascripts/worldview.js
 
-  img(src='/images/surveymap.png' alt='Satellite variants' style='width:auto;max-width:1600px;margin:20px;display:table;')
+    
