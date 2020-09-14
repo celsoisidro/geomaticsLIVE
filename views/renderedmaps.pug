@@ -1,20 +1,61 @@
 doctype html
 html
 
+head
   include includes/head
   include includes/header
-  link(rel="shortcut icon" href="/favicontwo.ico.jpg" type="image/x-icon")
+  link(rel='shortcut icon' href='/favicontwo.ico.jpg' type='image/x-icon')
 
-  div(class='grid-container0')
-    div
-      img(src='/images/renimg5.jpg' alt='Satellite variants' style='width:auto;max-width:500px;margin:20px;display:table;')
-    div
-      img(src='/images/renimg3.jpg' alt='Satellite variants' style='width:auto;max-width:500px;margin:20px;display:table;')
-    div
-     img(src='/images/renimg2.jpg' alt='Satellite variants' style='width:auto;max-width:500px;margin:20px;display:table;')
-    div
-     img(src='/images/renimg4.PNG' alt='Satellite variants' style='width:auto;max-width:500px;margin:20px;display:table;')
-    div
-     img(src='/images/renimg1.jpg' alt='Satellite variants' style='width:auto;max-width:500px;margin:20px;display:table;')
-    div
-     img(src='/images/renimg6.jpg' alt='Satellite variants' style='width:auto;max-width:500px;margin:20px;display:table;')
+  style
+    include ../public/stylesheets/renderedmaps.css
+
+body
+  div.row
+    div.column
+      img(src="/images/renimg5.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor")
+    div.column
+      img(src="/images/renimg3.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor")
+    div.column
+      img(src="/images/renimg2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor")
+    div.column
+      img(src="/images/renimg4.PNG" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor")
+
+  div.myModal.modal
+    span(class="close cursor" onclick="closeModal()") times
+    div.modal-content"
+
+      div.mySlides
+        div(class="numbertext") 1 / 4
+        img(src="/images/renimg5.jpg" style="width:100%")
+  
+      div.mySlides
+        div(class="numbertext") 2 / 4
+        img(src="/images/renimg3.jpg" style="width:100%")
+
+      div.mySlides
+        div(class="numbertext") 3 / 4
+        img(src="/images/renimg2.jpg" style="width:100%")
+
+      div.mySlides
+        div(class="numbertext") 4 / 4
+        img(src="/images/renimg4.jpg" style="width:100%")
+    
+      a(class="prev" onclick="plusSlides(-1)") #10094
+      a(class="next" onclick="plusSlides(1)") #10095
+
+      div.caption-container
+        p.caption
+
+      div.column
+        img(class="demo cursor" src="/images/renimg5.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise")
+      div.column
+        img(class="demo cursor" src="/images/renimg3.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise")
+      div.column
+        img(class="demo cursor" src="/images/renimg2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise")
+      div.column
+        img(class="demo cursor" src="/images/renimg4.PNG" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise")
+
+  script
+    include ../public/javascripts/renderedmaps.js
+
+include includes/foot
