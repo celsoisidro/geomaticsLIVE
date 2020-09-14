@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/index', (req, res) => {
-    res.render('index', { title: "geomaticslive" });
+    res.render('index', { title: 'geomaticslive' });
 });
 
 module.exports = router;
