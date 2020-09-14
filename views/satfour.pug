@@ -2,12 +2,14 @@ doctype html
 html
 
 head
-    link(rel="stylesheet" href="/stylesheets/style.css" type="text/css")
+    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
 
 body
     div(class='overlay')
         img(src='/images/sat_rapideye.png' alt='Satellite variants' style='width:500px;height:250px;')
-        img(class='firstbutton' src='/images/button_purple.png' style='width:80px;')
-        img(class='secondbutton' src='/images/button_blue.png' style='width:80px;')
-        img(class='thirdbutton' src='/images/button_green.png' style='width:80px;')
-        img(class='fourthbutton' src='/images/button_red.png' style='width:80px;')
+        div(class='button' style='width:70px;')
+            img(src='/images/button_animated.gif' onclick='myFunctionFour()')
+            span(class='popuptext' id='myPopupfour') RapidEye AG was a German geospatial information provider focused on assisting in management decision-making through services based on their own Earth observation imagery. The company operated a five-satellite constellation producing 5-meter resolution imagery that was designed and implemented by MacDonald Dettwiler (MDA) of Richmond, Canada.
+        
+    script
+        include ../public/javascripts/satellitepopup.js

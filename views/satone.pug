@@ -2,20 +2,14 @@ doctype html
 html
 
 head
-    link(rel="stylesheet" href="/stylesheets/style.css" type="text/css")
+    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
 
 body
     div(class='overlay')
-        img(src='/images/sat_landsateight.png' alt='Satellite variants' style='width:500px;height:250px;')
-        div(class='firstbutton' style='width:80px;')
-            img(src='/images/button_purple.png' onclick="myFunction()")
-            span(class='popuptext' id='myPopup') List of available researches about this satellite
-        div(class='secondbutton' style='width:80px;')
-            img(src='/images/button_blue.png' onclick="myFunctionTwo()" )
-            span(class='popuptwotext' id='myPopuptwo') List of global projects/ organizations utilizing this satellite
-        div(class='thirdbutton' style='width:80px;')
-            img(src='/images/button_green.png' onclick="myFunctionThree()" )
-            span(class='popupthreetext' id='myPopupthree') List of field research categories applicable for this satellite
-        div(class='fourthbutton' style='width:80px;')
-            img(src='/images/button_red.png' onclick="myFunctionFour()" )
-            span(class='popupfourtext' id='myPopupfour') Sample images that have been taken by this satellite
+        img(src='/images/sat_landsateight.png' style='width:500px;height:250px;')
+        div(class='button' style='width:70px;')
+            img(src='/images/button_animated.gif' onclick='myFunction()')
+            span(class='popuptext' id='myPopup') Landsat 8 (formally the Landsat Data Continuity Mission, LDCM) was launched on an Atlas-V rocket from Vandenberg Air Force Base, California on February 11, 2013. Landsat 8 is the most recently launched Landsat satellite and carries the Operational Land Imager (OLI) and the Thermal Infrared Sensor (TIRS) instruments.
+        
+    script
+        include ../public/javascripts/satellitepopup.js 
