@@ -1,17 +1,16 @@
 require([
-    "esri/Map",
-    "esri/views/MapView",
-    "esri/tasks/Locator",
-    "esri/Graphic",
-    "esri/layers/GraphicsLayer"
+    'esri/Map',
+    'esri/views/MapView',
+    'esri/tasks/Locator',
+    'esri/Graphic',
+    'esri/layers/GraphicsLayer'
 ], function(Map, MapView, Locator, Graphic, GraphicsLayer) {
 
     var map = new Map({
-        basemap: "streets"
+        basemap: 'national-geographic'
     });
-
     var view = new MapView({
-        container: "viewDiv",
+        container: 'viewDiv',
         map: map,
         center: [-114.063910, 51.034607],
         zoom: 11
@@ -19,9 +18,8 @@ require([
 
     var graphicsLayer = new GraphicsLayer();
     map.add(graphicsLayer);
-
     var polygon = {
-        type: "polygon",
+        type: 'polygon',
         rings: [
             [-113.910954, 51.176148],
             [-113.910954, 50.865474],
@@ -31,39 +29,109 @@ require([
             [-114.236128, 51.176148]
         ]
     };
-
     var simpleFillSymbol = {
-        type: "simple-fill",
+        type: 'simple-fill',
         color: [227, 139, 79, 0],
         outline: {
-            color: [25, 55, 255],
+            color: [0, 0, 0],
             width: 3
         }
     };
-
     var polygonGraphic = new Graphic({
         geometry: polygon,
         symbol: simpleFillSymbol
     });
-
     graphicsLayer.add(polygonGraphic);
 
-    var places = ["Coffee shop", "Grocery", "School", "College", "Gas station", "Food", "Hotel", "Parks and Outdoors"];
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+    var polygon = {
+        type: 'polygon',
+        rings: [
+            [-113.910954, 51.176148],
+            [-113.910954, 51.052983],
+            [-114.043014, 51.052983],
+            [-114.043014, 51.176148],
+            [-113.910954, 51.176148]
+        ]
+    };
+    var simpleFillSymbol = {
+        type: 'simple-fill',
+        color: [227, 139, 79, 0],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+    var polygonGraphic = new Graphic({
+        geometry: polygon,
+        symbol: simpleFillSymbol
+    });
+    graphicsLayer.add(polygonGraphic);
 
-    var select = document.createElement("select", "");
-    select.setAttribute("class", "esri-widget esri-select");
-    select.setAttribute("style", "width: 175px; font-family: Arial; font-size: 1em");
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+    var polygon = {
+        type: 'polygon',
+        rings: [
+            [-114.043014, 51.052983],
+            [-114.236128, 51.052983]
+        ]
+    };
+    var simpleFillSymbol = {
+        type: 'simple-fill',
+        color: [227, 139, 79, 0],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+    var polygonGraphic = new Graphic({
+        geometry: polygon,
+        symbol: simpleFillSymbol
+    });
+    graphicsLayer.add(polygonGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+    var polygon = {
+        type: 'polygon',
+        rings: [
+            [-114.043014, 51.052983],
+            [-114.043014, 50.865474]
+        ]
+    };
+    var simpleFillSymbol = {
+        type: 'simple-fill',
+        color: [227, 139, 79, 0],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+    var polygonGraphic = new Graphic({
+        geometry: polygon,
+        symbol: simpleFillSymbol
+    });
+    graphicsLayer.add(polygonGraphic);
+
+
+    var places = ['Coffee shop', 'Grocery', 'School', 'College', 'Gas station', 'Food', 'Hotel', 'Parks and Outdoors'];
+
+    var select = document.createElement('select', '');
+    select.setAttribute('class', 'esri-widget esri-select');
+    select.setAttribute('style', 'width: 175px; font-family: Arial; font-size: 1em');
     places.forEach(function(p) {
-        var option = document.createElement("option");
+        var option = document.createElement('option');
         option.value = p;
         option.innerHTML = p;
         select.appendChild(option);
     });
 
-    view.ui.add(select, "top-right");
+    view.ui.add(select, 'top-right');
 
     var locator = new Locator({
-        url: "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
+        url: 'http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer'
     });
 
     // Find places and add them to the map
@@ -72,7 +140,7 @@ require([
                 location: pt,
                 categories: [category],
                 maxLocations: 50,
-                outFields: ["Place_addr", "PlaceName"]
+                outFields: ['Place_addr', 'PlaceName']
             })
             .then(function(results) {
                 view.popup.close();
@@ -83,17 +151,17 @@ require([
                             attributes: result.attributes,
                             geometry: result.location,
                             symbol: {
-                                type: "simple-marker",
-                                color: "#000000",
-                                size: "12px",
+                                type: 'simple-marker',
+                                color: '#000000',
+                                size: '12px',
                                 outline: {
-                                    color: "#ffffff",
-                                    width: "2px"
+                                    color: '#ffffff',
+                                    width: '2px'
                                 }
                             },
                             popupTemplate: {
-                                title: "{PlaceName}",
-                                content: "{Place_addr}"
+                                title: '{PlaceName}',
+                                content: '{Place_addr}'
                             }
                         }));
                 });
@@ -109,7 +177,7 @@ require([
     });
 
     // Listen for mouse clicks and find places
-    view.on("click", function(event) {
+    view.on('click', function(event) {
         view.hitTest(event.screenPoint)
             .then(function(response) {
                 if (response.results.length < 2) { // If graphic is not clicked, find places 
