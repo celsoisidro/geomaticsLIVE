@@ -17,8 +17,6 @@ var pubartictwoRouter = require('./routes/pubartictwo');
 var pubarticthreeRouter = require('./routes/pubarticthree');
 var pubarticfourRouter = require('./routes/pubarticfour');
 var pubarticfiveRouter = require('./routes/pubarticfive');
-var satoneRouter = require('./routes/satone');
-var sattwoRouter = require('./routes/sattwo');
 
 var app = express();
 
@@ -50,8 +48,6 @@ app.use('/', pubartictwoRouter);
 app.use('/', pubarticthreeRouter);
 app.use('/', pubarticfourRouter);
 app.use('/', pubarticfiveRouter);
-app.use('/', satoneRouter);
-app.use('/', sattwoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
