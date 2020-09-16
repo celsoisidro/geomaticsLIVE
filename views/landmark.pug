@@ -6,6 +6,13 @@ block content
 
     div(id='viewDiv')
     script
-        include ../public/javascripts/worldview.js
+        include ../public/javascripts/landmark.js
+
+    each image in images
+        figure.figure
+            img(src=image.thumbnail).figure-img.img-fluid.
+            figcaption.figure-caption= image.name
+    else
+        p No images available.
 
     
