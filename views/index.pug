@@ -1,15 +1,6 @@
 extends layout
 
 block content
-
-  each image in images
-    h2= image.name
-    img(src=image.thumbnail)
-    p= image.country
-
-  else
-    p No images available.
-
   div(class='grid-container')
     div
       p(style='font-style:normal;font-size:30px;margin-left:-5em;') CORE CONCEPT
