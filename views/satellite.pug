@@ -1,10 +1,6 @@
-doctype html
-html
+extends layout
 
-  include includes/head
-  include includes/header
-  link(rel='shortcut icon' href='/favicontwo.ico.jpg' type='image/x-icon')
-
+block content
   div.grid-container0
     div
       include satone
@@ -18,5 +14,3 @@ html
       include satfive
     div
       include satsix
-
-  include includes/foot

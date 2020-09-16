@@ -1,13 +1,12 @@
 doctype html
 html
-  head
-    include includes/head
+  include includes/head
+  body
     include includes/header
     script
       include ../public/javascripts/header.js 
 
-  body
+  .container
+  block content
     
-    block content
-
-    include index
+  include includes/footer
