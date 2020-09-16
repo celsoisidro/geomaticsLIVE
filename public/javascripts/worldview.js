@@ -1,18 +1,18 @@
 require([
-    'esri/Map',
-    'esri/views/MapView',
-    'esri/widgets/BasemapToggle',
-    'esri/widgets/BasemapGallery',
-    'esri/Graphic',
-    'esri/layers/GraphicsLayer'
+    "esri/Map",
+    "esri/views/MapView",
+    "esri/widgets/BasemapToggle",
+    "esri/widgets/BasemapGallery",
+    "esri/Graphic",
+    "esri/layers/GraphicsLayer"
 ], function(Map, MapView, BasemapToggle, BasemapGallery, Graphic, GraphicsLayer) {
 
     var map = new Map({
-        basemap: 'dark-gray'
+        basemap: "streets"
     });
 
     var view = new MapView({
-        container: 'viewDiv',
+        container: "viewDiv",
         map: map,
         center: [153.068085, -27.454992],
         zoom: 12
@@ -22,7 +22,7 @@ require([
     map.add(graphicsLayer);
 
     var polygon = {
-        type: 'polygon',
+        type: "polygon",
         rings: [
             [-113.910954, 51.176148],
             [-113.910954, 50.865474],
@@ -34,7 +34,7 @@ require([
     };
 
     var simpleFillSymbol = {
-        type: 'simple-fill',
+        type: "simple-fill",
         color: [227, 139, 79, 0],
         outline: {
             color: [25, 55, 255],
@@ -53,11 +53,11 @@ require([
         view: view,
         source: {
             portal: {
-                url: 'http://www.arcgis.com',
+                url: "http://www.arcgis.com",
                 useVectorBasemaps: true,
             },
         }
     });
 
-    view.ui.add(basemapGallery, 'top-right');
+    view.ui.add(basemapGallery, "top-right");
 });

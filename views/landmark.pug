@@ -1,11 +1,16 @@
-extends layout
+doctype html
+html
+    head    
+        include includes/head
+        include includes/header
+        link(rel="shortcut icon" href="/favicontwo.ico.jpg" type="image/x-icon")
+        
+        style
+            include ../public/stylesheets/worldview.css
 
-block content
-    style
-        include ../public/stylesheets/worldview.css
-
-    div(id='viewDiv')
-    script
-        include ../public/javascripts/worldview.js
+    body
+        div(id="viewDiv")
+        script
+            include ../public/javascripts/worldview.js
 
     
