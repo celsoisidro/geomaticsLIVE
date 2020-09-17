@@ -23,64 +23,64 @@ seeder.connect('mongodb://localhost/geomaticslive', function() {
 var data = [{
     'model': 'Image',
     'documents': [{
-            name: 'Brisbane City-1',
-            country: 'United States USGS',
-            cover: '/images/lmark001.png',
-            thumbnail: '/images/lmark001.png'
+            name: 'Bike Trail',
+            place: 'Newstead Terrace',
+            cover: '/images/ttrail001.png',
+            thumbnail: '/images/ttrail001.png'
         },
         {
-            name: 'Brisbane City-2',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Hiking Trail',
+            place: 'Mt. Cootha',
+            cover: '/images/ttrail002.png',
+            thumbnail: '/images/ttrail002.png'
         },
         {
-            name: 'Brisbane City-3',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Bike Trail',
+            place: 'New Farm',
+            cover: '/images/ttrail003.png',
+            thumbnail: '/images/ttrail003.png'
         },
         {
-            name: 'Brisbane City-4',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Park and Library',
+            place: 'Southbank',
+            cover: '/images/ttrail004.png',
+            thumbnail: '/images/ttrail004.png'
         },
         {
-            name: 'Brisbane City-5',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Hiking Trail',
+            place: 'Mt. Cootha',
+            cover: '/images/ttrail005.png',
+            thumbnail: '/images/ttrail005.png'
         },
         {
-            name: 'Brisbane City-6',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Shorncliffe Pier',
+            place: 'Shorncliffe',
+            cover: '/images/ttrail006.png',
+            thumbnail: '/images/ttrail006.png'
         },
         {
-            name: 'Brisbane City-7',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Fishermans Horizon',
+            place: 'Botanical Garden',
+            cover: '/images/ttrail007.png',
+            thumbnail: '/images/ttrail007.png'
         },
         {
-            name: 'Brisbane City-8',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Botanical Garden',
+            place: 'Cairns',
+            cover: '/images/ttrail008.png',
+            thumbnail: '/images/ttrail008.png'
         },
         {
-            name: 'Brisbane City-9',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Opera House',
+            place: 'Sydney',
+            cover: '/images/ttrail009.png',
+            thumbnail: '/images/ttrail009.png'
         },
         {
-            name: 'Brisbane City-10',
-            country: 'United States USGS',
-            cover: 'https://fakeimg.pl/400x300/?text=Book',
-            thumbnail: 'https://fakeimg.pl/150x150/?text=Book'
+            name: 'Surfers Paradise',
+            place: 'Gold Coast',
+            cover: '/images/ttrail010.png',
+            thumbnail: '/images/ttrail010.png'
         },
     ]
 }];

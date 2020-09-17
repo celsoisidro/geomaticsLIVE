@@ -3,100 +3,268 @@ require([
     'esri/views/MapView',
     'esri/Graphic',
     'esri/layers/GraphicsLayer'
-], function(Map, MapView, BasemapToggle, BasemapGallery, Graphic, GraphicsLayer) {
+], function(Map, MapView, Graphic, GraphicsLayer) {
 
     var map = new Map({
-        basemap: 'dark-gray'
+        basemap: 'satellite'
     });
 
     var view = new MapView({
         container: 'viewDiv',
         map: map,
-        center: [153.068085, -27.454992],
-        zoom: 12
+        center: [134.818553, -25.003148],
+        zoom: 5
     });
 
     var graphicsLayer = new GraphicsLayer();
     map.add(graphicsLayer);
 
-    var polyline = {
-        type: "polyline",
-        paths: [
-            [153.027390, -27.474386],
-            [153.022201, -27.471860],
-            [153.025692, -27.476223],
-            [153.030100, -27.479328],
-            [153.031572, -27.476894],
-            [153.030565, -27.468535]
-        ]
+    var point = {
+        type: 'point',
+        longitude: 153.011304,
+        latitude: -27.498225
     };
 
-    var polylineGraphic = new Graphic({
-        geometry: polyline,
-        symbol: simpleLineSymbol
-    })
-
-    graphicsLayer.add(polylineGraphic);
-
-});
-
-
-require([
-    "esri/Map",
-    "esri/views/MapView",
-    "esri/Graphic",
-    "esri/layers/GraphicsLayer"
-], function(Map, MapView, Graphic, GraphicsLayer) {
-
-    var map = new Map({
-        basemap: "dark-gray"
-    });
-
-    var view = new MapView({
-        container: "viewDiv",
-        map: map,
-        center: [153.032577, -27.471188],
-        zoom: 14
-    });
-
-    var graphicsLayer = new GraphicsLayer();
-    map.add(graphicsLayer);
-
-    var simpleLineSymbol = {
-        type: "simple-line",
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
         color: [226, 119, 40],
-        width: 6
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
     };
 
-    var polyline = {
-        type: "polyline",
-        paths: [
-            [153.019683, -27.473073],
-            [153.022201, -27.471860],
-            [153.025692, -27.476223],
-            [153.030100, -27.479328],
-            [153.031572, -27.476894],
-            [153.030565, -27.468535],
-            [153.032660, -27.462834],
-            [153.037637, -27.462409],
-            [153.042185, -27.473859],
-        ]
-    };
-
-    var polylineGraphic = new Graphic({
-        geometry: polyline,
-        symbol: simpleLineSymbol
-    })
-    graphicsLayer.add(polylineGraphic);
-
-    // create and add the layer
-    var mil = new esri.layers.MapImageLayer();
-    map.addLayer(mil);
-
-    // create an add the actual image
-    var mi = new esri.layers.MapImage({
-        'extent': { 'xmin': 153.026578, 'ymin': -27.466270, 'xmax': 153.035635, 'ymax': -27.472217 },
-        'href': 'https://images.app.goo.gl/qfr2D3nbrCewnrQg8'
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
     });
-    mil.addImage(mi);
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 153.046078,
+        latitude: -27.448952
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [0, 0, 255],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 153.040534,
+        latitude: -27.468472
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [0, 255, 255],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 153.016727,
+        latitude: -27.479074
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [255, 255, 0],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 152.942534,
+        latitude: -27.472042
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [0, 204, 0],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 153.084262,
+        latitude: -27.322634
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [255, 102, 178],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 153.029935,
+        latitude: -27.475852
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [154, 241, 178],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 145.756078,
+        latitude: -16.903997
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [200, 200, 150],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 151.215297,
+        latitude: -33.856784
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [100, 100, 250],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+    var graphicsLayer = new GraphicsLayer();
+    map.add(graphicsLayer);
+
+    var point = {
+        type: 'point',
+        longitude: 153.416667,
+        latitude: -28.000000
+    };
+
+    var simpleMarkerSymbol = {
+        type: 'simple-marker',
+        color: [255, 51, 51],
+        outline: {
+            color: [0, 0, 0],
+            width: 1
+        }
+    };
+
+    var pointGraphic = new Graphic({
+        geometry: point,
+        symbol: simpleMarkerSymbol
+    });
+
+    graphicsLayer.add(pointGraphic);
+
+
 });

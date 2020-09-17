@@ -6,7 +6,7 @@ var imagesSchema = new Schema({
         type: String,
         required: true
     },
-    country: {
+    place: {
         type: String,
         required: true,
     },
