@@ -1,15 +1,7 @@
-doctype html
-html
-
-head
-    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
-
-body
-    div.overlay
-        img(src='/images/sat_rapideye.png' alt='Satellite variants' style='width:500px;height:250px;')
-        div(class='button' style='width:70px;')
-            img(src='/images/button_animated.gif' onclick='myFunctionFour()')
-            span(class='popuptext' id='myPopupfour') RapidEye AG was a German geospatial information provider focused on assisting in management decision-making through services based on their own Earth observation imagery. The company operated a five-satellite constellation producing 5-meter resolution imagery that was designed and implemented by MacDonald Dettwiler (MDA) of Richmond, Canada.
-        
-    script
-        include ../public/javascripts/satellitepopup.js
+div.overlay
+    img(src='/images/sat_rapideye.png' style='width:500px;height:250px;')
+    div.button(style='width:70px;')
+        img(src='/images/button_animated.gif' onclick='myFunctionFour()')
+        span.popuptext(id='myPopupfour') RapidEye AG was a German geospatial information provider focused on assisting in management decision-making through services based on their own Earth observation imagery. The company operated a five-satellite constellation producing 5-meter resolution imagery that was designed and implemented by MacDonald Dettwiler (MDA) of Richmond, Canada.        
+script
+    include ../public/javascripts/satellitepopup.js

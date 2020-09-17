@@ -1,15 +1,7 @@
-doctype html
-html
-
-head
-    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
-
-body
-    div.overlay
-        img(src='/images/sat_poes.png' alt='Satellite variants' style='width:500px;height:250px;')
-        div(class='button' style='width:70px;')
-            img(src='/images/button_animated.gif' onclick='myFunctionThree()')
-            span(class='popuptext' id='myPopupthree') The Polar-orbiting Operational Environmental Satellite (POES) was a constellation of polar orbiting weather satellites funded by the National Oceanic and Atmospheric Administration (NOAA) and the European Organization for the Exploitation of Meteorological Satellites (EUMETSAT) with the intent of improving the accuracy and detail of weather analysis and forecasting.[1] The Spacecraft were provided by NASA and the European Space Agency, and NASA's Goddard Space Flight Center oversaw the manufacture, integration and test of the NASA-provided TIROS satellites.[2] The first polar-orbiting weather satellite launched as part of the POES constellation was the Television Infrared Observation Satellite (TIROS), which was launched on April 1, 1960. The final spacecraft, NOAA-19, was launched in February 2009.
-        
-    script
-        include ../public/javascripts/satellitepopup.js
+div.overlay
+    img(src='/images/sat_poes.png' style='width:500px;height:250px;')
+    div.button(style='width:70px;')
+        img(src='/images/button_animated.gif' onclick='myFunctionThree()')
+        span.popuptext(id='myPopupthree') The Polar-orbiting Operational Environmental Satellite (POES) was a constellation of polar orbiting weather satellites funded by the National Oceanic and Atmospheric Administration (NOAA) and the European Organization for the Exploitation of Meteorological Satellites (EUMETSAT) with the intent of improving the accuracy and detail of weather analysis and forecasting.[1] The Spacecraft were provided by NASA and the European Space Agency, and NASA's Goddard Space Flight Center oversaw the manufacture, integration and test of the NASA-provided TIROS satellites.[2] The first polar-orbiting weather satellite launched as part of the POES constellation was the Television Infrared Observation Satellite (TIROS), which was launched on April 1, 1960. The final spacecraft, NOAA-19, was launched in February 2009.      
+script
+    include ../public/javascripts/satellitepopup.js

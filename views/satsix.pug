@@ -1,14 +1,7 @@
-doctype html
-html
-
-head
-    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
-
-body
-    div.overlay
-        img(src='/images/sat_worldview3.png' alt='Satellite variants' style='width:500px;height:250px;')
-        div(class='button' style='width:70px;')
-            img(src='/images/button_animated.gif' onclick='myFunctionSix()')
-            span(class='popuptext' id='myPopupsix') WorldView-3 is a commercial Earth observation satellite owned by DigitalGlobe. It was launched on 13 August 2014 to become DigitalGlobe's sixth satellite in orbit, joining Ikonos which was launched in 1999, QuickBird in 2001, WorldView-1 in 2007, GeoEye-1 in 2008, and WorldView-2 in 2009.
-    script
-        include ../public/javascripts/satellitepopup.js
+div.overlay
+    img(src='/images/sat_worldview3.png' style='width:500px;height:250px;')
+    div.button(style='width:70px;')
+        img(src='/images/button_animated.gif' onclick='myFunctionSix()')
+        span.popuptext(id='myPopupsix') WorldView-3 is a commercial Earth observation satellite owned by DigitalGlobe. It was launched on 13 August 2014 to become DigitalGlobe's sixth satellite in orbit, joining Ikonos which was launched in 1999, QuickBird in 2001, WorldView-1 in 2007, GeoEye-1 in 2008, and WorldView-2 in 2009.
+script
+    include ../public/javascripts/satellitepopup.js

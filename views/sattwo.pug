@@ -1,15 +1,7 @@
-doctype html
-html
-
-head
-    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
-
-body
-    div.overlay
-        img(src='/images/sat_pleaides1a.png' alt='Satellite variants' style='width:500px;height:250px;')
-        div(class='button' style='width:70px;')
-            img(src='/images/button_animated.gif' onclick='myFunctionTwo()')
-            span(class='popuptext' id='myPopuptwo') The Pléiades constellation is composed of two very-high-resolution optical Earth-imaging satellites. Pléiades-HR 1A and Pléiades-HR 1B provide the coverage of Earth's surface with a repeat cycle of 26 days.[1] Designed as a dual civil/military system, Pléiades will meet the space imagery requirements of European defence as well as civil and commercial needs.
-        
-    script
-        include ../public/javascripts/satellitepopup.js
+div.overlay
+    img(src='/images/sat_pleaides1a.png' style='width:500px;height:250px;')
+    div.button(style='width:70px;')
+        img(src='/images/button_animated.gif' onclick='myFunctionTwo()')
+        span.popuptext(id='myPopuptwo') The Pléiades constellation is composed of two very-high-resolution optical Earth-imaging satellites. Pléiades-HR 1A and Pléiades-HR 1B provide the coverage of Earth's surface with a repeat cycle of 26 days.[1] Designed as a dual civil/military system, Pléiades will meet the space imagery requirements of European defence as well as civil and commercial needs.       
+script
+    include ../public/javascripts/satellitepopup.js

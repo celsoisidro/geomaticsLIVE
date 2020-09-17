@@ -1,15 +1,7 @@
-doctype html
-html
-
-head
-    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
-
-body
-    div.overlay
-        img(src='/images/sat_spotsix.png' style='width:500px;height:250px;')
-        div(class='button' style='width:70px;')
-            img(src='/images/button_animated.gif' onclick='myFunctionFive()')
-            span(class='popuptext' id='myPopupfive') SPOT 6 is an optical imaging satellite capable of imaging the Earth with a resolution of 6 meters in multispectral (blue, green, red, near-IR) and 1.5 meters in panchromatic. The satellite provides imaging products to customers in the defense, agriculture, deforestation, environmental monitoring, coastal surveillance, engineering, oil, gas, and mining industries.
-        
-    script
-        include ../public/javascripts/satellitepopup.js
+div.overlay
+    img(src='/images/sat_spotsix.png' style='width:500px;height:250px;')
+    div.button(style='width:70px;')
+        img(src='/images/button_animated.gif' onclick='myFunctionFive()')
+        span.popuptext(id='myPopupfive') SPOT 6 is an optical imaging satellite capable of imaging the Earth with a resolution of 6 meters in multispectral (blue, green, red, near-IR) and 1.5 meters in panchromatic. The satellite provides imaging products to customers in the defense, agriculture, deforestation, environmental monitoring, coastal surveillance, engineering, oil, gas, and mining industries.        
+script
+    include ../public/javascripts/satellitepopup.js

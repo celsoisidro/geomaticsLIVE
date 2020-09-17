@@ -7159,7 +7159,6 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   margin: 0;
   margin-bottom: 30px;
-  font-family: sans-serif;
   background-image: url("/images/bgimg_gray.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -7249,24 +7248,6 @@ img {
   height: auto;
   background-size: 100% 100%; }
 
-.image {
-  position: relative;
-  float: left; }
-
-.image .text {
-  position: absolute;
-  top: 15%;
-  left: 2%; }
-
-.image {
-  position: relative;
-  float: left; }
-
-.image .text {
-  position: absolute;
-  top: 15%;
-  left: 2%; }
-
 .grid-container-1 {
   display: grid;
   grid-template-columns: auto auto;
@@ -7307,6 +7288,32 @@ img {
   padding: 20px 0;
   font-size: 15px; }
 
+.grid-container-4 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 300px;
+  grid-gap: 20px;
+  padding: 20px;
+  padding-right: 20px;
+  background-color: transparent; }
+
+.grid-container-4 > div {
+  background-color: transparent;
+  padding: 20px 50px; }
+
+.grid-container-5 {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px 300px;
+  grid-template-rows: 350px;
+  grid-gap: 2px;
+  padding: 20px;
+  padding-right: 30px;
+  background-color: transparent; }
+
+.grid-container-5 > div {
+  background-color: transparent;
+  padding: 20px 50px; }
+
 p.primary {
   font-size: 30px;
   text-align: left; }
@@ -7340,77 +7347,6 @@ a.alternate {
   line-height: 1.5;
   display: inline-block;
   vertical-align: bottom; }
-
-.grid-container0 {
-  display: grid;
-  grid-template-columns: 750px 750px;
-  grid-template-rows: 300px;
-  grid-gap: 20px;
-  padding: 20px;
-  padding-right: 20px;
-  background-color: transparent; }
-
-.grid-container0 > div {
-  background-color: transparent;
-  text-align: justify;
-  padding: 20px 50px;
-  font-size: 30px; }
-
-.grid-container4 {
-  display: grid;
-  grid-template-columns: 300px 300px 300px 300px 300px;
-  grid-template-rows: 350px;
-  grid-gap: 2px;
-  padding: 20px;
-  padding-right: 30px;
-  background-color: transparent; }
-
-.grid-container4 > div {
-  background-color: transparent;
-  padding: 20px 50px; }
-
-.zoom {
-  padding: 50px;
-  transition: transform .2s;
-  /* Animation */
-  margin: -1.7em -1em; }
-
-.zoom:hover {
-  transform: scale(1.5);
-  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */ }
-
-.ui-progressbar {
-  position: relative; }
-
-#progressbar {
-  background: #f5fffa; }
-
-.ui-progressbar .ui-progressbar-value {
-  margin: 0; }
-
-.progress-label {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  color: #cccccc;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 15px; }
-
-.ui-widget-header {
-  background: skyblue; }
-
-p {
-  text-align: center;
-  font-family: 'Open Sans Condensed', Cambria;
-  font-size: 26px; }
-
-.well {
-  margin-top: 20px; }
-
-img.one {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
 
 /* The actual popup */
 .popuptext {
