@@ -18,19 +18,15 @@ db.once('open', function() {
 });
 
 var indexRouter = require('./routes/index');
-var worldviewRouter = require('./routes/worldview');
-var satelliteRouter = require('./routes/satellite');
+var cityviewRouter = require('./routes/cityview');
+var satwikiRouter = require('./routes/satwiki');
 var pubarticRouter = require('./routes/pubartic');
-var renderedmapsRouter = require('./routes/renderedmaps');
-var landmarkRouter = require('./routes/landmark');
-var mainRouter = require('./routes/main');
+var traveltrailRouter = require('./routes/traveltrail');
 var pubarticoneRouter = require('./routes/pubarticone');
 var pubartictwoRouter = require('./routes/pubartictwo');
 var pubarticthreeRouter = require('./routes/pubarticthree');
 var pubarticfourRouter = require('./routes/pubarticfour');
 var pubarticfiveRouter = require('./routes/pubarticfive');
-var satoneRouter = require('./routes/satone');
-var sattwoRouter = require('./routes/sattwo');
 
 var app = express();
 
@@ -51,19 +47,15 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/', worldviewRouter);
-app.use('/', satelliteRouter);
+app.use('/', cityviewRouter);
+app.use('/', satwikiRouter);
 app.use('/', pubarticRouter);
-app.use('/', renderedmapsRouter);
-app.use('/', landmarkRouter);
-app.use('/', mainRouter);
+app.use('/', traveltrailRouter);
 app.use('/', pubarticoneRouter);
 app.use('/', pubartictwoRouter);
 app.use('/', pubarticthreeRouter);
 app.use('/', pubarticfourRouter);
 app.use('/', pubarticfiveRouter);
-app.use('/', satoneRouter);
-app.use('/', sattwoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
