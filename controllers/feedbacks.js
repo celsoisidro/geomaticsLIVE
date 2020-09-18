@@ -19,7 +19,7 @@ exports.create = function(req, res) {
     newFeedback.save(function(err) {
         if (err) throw err;
 
-        console.log('Feedback successfully sent! Please wait for 1-2 days for our response.');
+        console.log('Feedback successfully sent! Please wait for 1-2 days before we can respond to your feedback, thank you!.');
     });
 
     res.redirect('/');
