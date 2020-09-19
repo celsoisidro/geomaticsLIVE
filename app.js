@@ -20,14 +20,13 @@ db.once('open', function() {
 var indexRouter = require('./routes/index');
 var cityviewRouter = require('./routes/cityview');
 var satwikiRouter = require('./routes/satwiki');
-var pubarticRouter = require('./routes/pubartic');
+var pubarticleRouter = require('./routes/pubarticle');
 var traveltrailRouter = require('./routes/traveltrail');
-var traveltrail_dummyRouter = require('./routes/traveltrail_dummy');
-var pubarticoneRouter = require('./routes/pubarticone');
-var pubartictwoRouter = require('./routes/pubartictwo');
-var pubarticthreeRouter = require('./routes/pubarticthree');
-var pubarticfourRouter = require('./routes/pubarticfour');
-var pubarticfiveRouter = require('./routes/pubarticfive');
+var pubarticleoneRouter = require('./routes/pubarticleone');
+var pubarticletwoRouter = require('./routes/pubarticletwo');
+var pubarticlethreeRouter = require('./routes/pubarticlethree');
+var pubarticlefourRouter = require('./routes/pubarticlefour');
+var pubarticlefiveRouter = require('./routes/pubarticlefive');
 var feedbacksRouter = require('./routes/feedbacks');
 
 
@@ -52,14 +51,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/', cityviewRouter);
 app.use('/', satwikiRouter);
-app.use('/', pubarticRouter);
+app.use('/', pubarticleRouter);
 app.use('/', traveltrailRouter);
-app.use('/', traveltrail_dummyRouter);
-app.use('/', pubarticoneRouter);
-app.use('/', pubartictwoRouter);
-app.use('/', pubarticthreeRouter);
-app.use('/', pubarticfourRouter);
-app.use('/', pubarticfiveRouter);
+app.use('/', pubarticleoneRouter);
+app.use('/', pubarticletwoRouter);
+app.use('/', pubarticlethreeRouter);
+app.use('/', pubarticlefourRouter);
+app.use('/', pubarticlefiveRouter);
 app.use('/', feedbacksRouter);
 
 // catch 404 and forward to error handler
