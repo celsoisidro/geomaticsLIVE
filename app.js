@@ -18,7 +18,7 @@ db.once('open', function() {
 });
 
 var indexRouter = require('./routes/index');
-var cityviewRouter = require('./routes/cityview');
+var travelfacilitiesRouter = require('./routes/travelfacilities');
 var satwikiRouter = require('./routes/satwiki');
 var pubarticleRouter = require('./routes/pubarticle');
 var traveltrailRouter = require('./routes/traveltrail');
@@ -49,7 +49,7 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/', cityviewRouter);
+app.use('/', travelfacilitiesRouter);
 app.use('/', satwikiRouter);
 app.use('/', pubarticleRouter);
 app.use('/', traveltrailRouter);
