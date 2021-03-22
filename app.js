@@ -31,6 +31,9 @@ var pubarticlefiveRouter = require('./routes/pubarticlefive');
 var pubarticlesixRouter = require('./routes/pubarticlesix');
 var pubarticlesevenRouter = require('./routes/pubarticleseven');
 var pubarticleeightRouter = require('./routes/pubarticleeight');
+var pubarticlenineRouter = require('./routes/pubarticlenine');
+var pubarticletenRouter = require('./routes/pubarticleten');
+var pubarticleelevenRouter = require('./routes/pubarticleeleven');
 var feedbacksRouter = require('./routes/feedbacks');
 
 
@@ -65,6 +68,9 @@ app.use('/', pubarticlefiveRouter);
 app.use('/', pubarticlesixRouter);
 app.use('/', pubarticlesevenRouter);
 app.use('/', pubarticleeightRouter);
+app.use('/', pubarticlenineRouter);
+app.use('/', pubarticletenRouter);
+app.use('/', pubarticleelevenRouter);
 app.use('/', feedbacksRouter);
 
 // catch 404 and forward to error handler
