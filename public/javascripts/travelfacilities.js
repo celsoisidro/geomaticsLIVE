@@ -6,53 +6,45 @@ require([
     'esri/layers/GraphicsLayer'
 ], function(Map, MapView, Locator, Graphic, GraphicsLayer) {
 
-    var map = new Map({
-        basemap: 'national-geographic'
-    });
-    var view = new MapView({
-        container: 'viewDiv',
-        map: map,
-        center: [-114.063910, 51.034607],
-        zoom: 11
-    });
 
-    var graphicsLayer = new GraphicsLayer();
-    map.add(graphicsLayer);
-    var polygon = {
-        type: 'polygon',
-        rings: [
-            [-114.016732, 51.156405],
-            [-113.921833, 51.156405],
-            [-113.921833, 51.053043],
-            [-113.945813, 51.052520],
-            [-113.958416, 51.054420],
-            [-113.983610, 51.052182],
-            [-114.004677, 51.044268],
-            [-114.017878, 51.048991],
-            [-114.031980, 51.048054],
-            [-114.063774, 51.055225],
-            [-114.063774, 51.109663],
-            [-114.072601, 51.125042],
-            [-114.071399, 51.140587],
-            [-114.063788, 51.146722],
-            [-114.071643, 51.160638],
-            [-114.070706, 51.180202],
-            [-114.050658, 51.197864],
-        ]
-    };
-    var simpleFillSymbol = {
-        type: 'simple-fill',
-        color: [227, 139, 79, 0],
-        outline: {
-            color: [0, 0, 0],
-            width: 1
-        }
-    };
-    var polygonGraphic = new Graphic({
-        geometry: polygon,
-        symbol: simpleFillSymbol
-    });
-    graphicsLayer.add(polygonGraphic);
+    map = new Map("mapDiv", {
+        center: { lng: -114.063910, lat: 51.034607 },
+        zoom: 11,
+        basemap: "national-geographic"
+      });
+
+    var CalgaryDelimeters = [
+        { lng: -114.016732, lat: 51.156405 },
+        { lng: -113.921833, lat: 51.156405 },
+        { lng: -113.921833, lat: 51.053043 },
+        { lng: -113.945813, lat: 51.052520 },
+        { lng: -113.958416, lat: 51.054420 },
+        { lng: -113.983610, lat: 51.052182 },
+        { lng: -114.004677, lat: 51.044268 },
+        { lng: -114.017878, lat: 51.048991 },
+        { lng: -114.031980, lat: 51.048054 },
+        { lng: -114.063774, lat: 51.055225 },
+        { lng: -114.063774, lat: 51.109663 },
+        { lng: -114.072601, lat: 51.125042 },
+        { lng: -114.071399, lat: 51.140587 },
+        { lng: -114.063788, lat: 51.146722 },
+        { lng: -114.071643, lat: 51.160638 },
+        { lng: -114.070706, lat: 51.180202 },
+        { lng: -114.050658, lat: 51.197864 }
+        ];
+
+// Construct the polygon.
+var CalgaryPolygon = new MapView.Polygon ({
+    paths: CalgaryDelimeters,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 3,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+});
+
+// Draw the polygon on the desired map instance
+CalgaryPolygon.setMap(MapView);
 
     var graphicsLayer = new GraphicsLayer();
     map.add(graphicsLayer);
@@ -248,4 +240,37 @@ require([
                 }
             })
     });
+        //close the dialog when the mouse leaves the highlight graphic
+        graphicsLayer.on("load", function(){
+            graphicsLayer.enableMouseEvents();
+            graphicsLayer.on("mouse-out", closeDialog);
+      
+          });
+      
+          //listen for when the onMouseOver event fires on the countiesGraphicsLayer
+          //when fired, create a new graphic with the geometry from the event.graphic and add it to the maps graphics layer
+          graphicsLayer.on("mouse-over", function(evt){
+            var t = "<b>${NAME}</b><hr><b>2000 Population: </b>${POP2000:NumberFormat}<br>"
+              + "<b>2000 Population per Sq. Mi.: </b>${POP00_SQMI:NumberFormat}<br>"
+              + "<b>2007 Population: </b>${POP2007:NumberFormat}<br>"
+              + "<b>2007 Population per Sq. Mi.: </b>${POP07_SQMI:NumberFormat}";
+      
+            var content = esriLang.substitute(evt.graphic.attributes,t);
+            var highlightGraphic = new Graphic(evt.graphic.geometry,highlightSymbol);
+            graphicsLayer.add(highlightGraphic);
+      
+            dialog.setContent(content);
+      
+            domStyle.set(dialog.domNode, "opacity", 0.85);
+            dijitPopup.open({
+              popup: dialog,
+              x: evt.pageX,
+              y: evt.pageY
+            });
+          });
+      
+          function closeDialog() {
+            graphicsLayer.clear();
+            dijitPopup.close(dialog);
+          }      
 });
