@@ -7413,4 +7413,64 @@ a.alternate {
   cursor: pointer;
   border-radius: 5px; }
 
+/* Position the image container (needed to position the left and right arrows) */
+.cont {
+  position: relative; }
+
+/* Hide the images by default */
+.mySlides {
+  display: none; }
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer; }
+
+/* Next & previous buttons */
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none; }
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+/* Container for image text */
+.caption-cont {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white; }
+
+.r:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* Six columns side by side */
+.c {
+  float: left;
+  width: 16.66%; }
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6; }
+
+.demo:hover {
+  opacity: 1; }
+
 /*# sourceMappingURL=style.css.map */
