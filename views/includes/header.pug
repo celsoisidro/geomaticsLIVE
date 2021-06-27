@@ -16,12 +16,21 @@ header
   
   img(src='images/index_cmi_head.png' border='1')
 
-  div.topnav.myTopnav
+  div.topnav
     a(href='/' class='active') Main
-    a(href='/travelfacilities') Travel Facilities
-    a(href='/traveltrail_dummy') Travel Trail
+    a(href='/travelfacilities') Calgary Facilities
     a(href='/satwiki') Sat Wiki
     a(href='/pubarticle') Published Article 
+
+    div.dropdown
+      button.dropbtn Visited Countries
+        i(class='fa fa-caret-down')
+          div.dropdown-content
+            a(href='/travel_cairns') Philippines
+            a(href='/travel_cairns') Vietnam
+            a(href='/travel_cairns') Cambodia  
+            a(href='/travel_cairns') Thailand   
+            a(href='/travel_cairns') Singapore
 
     div.search-container
       form(action='https://scholar.google.com/' method='get')
