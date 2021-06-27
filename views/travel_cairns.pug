@@ -1,0 +1,64 @@
+extends layout
+
+block content
+    style
+        include ../public/stylesheets/maps.css
+
+    b LOCATION:
+    p CAIRNS, Australia
+    div.grid-container-2
+        div(id='viewDiv' style='width:900px;height:500px;')
+        div(id='viewDiv')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C1.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C2.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C3.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C4.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C5.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C6.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C7.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C8.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C9.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C10.JPG' style='width:100%;')
+            div.mySlides 
+                img(src='/images/Images/Australia_Cairns/C11.JPG' style='width:100%;')
+                
+            div.caption-cont
+                p(id='caption')
+
+            div.r
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C1.JPG' onclick='currentSlide(1)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C2.JPG' onclick='currentSlide(2)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C3.JPG' onclick='currentSlide(3)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C4.JPG' onclick='currentSlide(4)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C5.JPG' onclick='currentSlide(5)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C6.JPG' onclick='currentSlide(6)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C7.JPG' onclick='currentSlide(7)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C8.JPG' onclick='currentSlide(8)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C9.JPG' onclick='currentSlide(9)' style='width:100%;' alt='Cairns Botanical Garden')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C10.JPG' onclick='currentSlide(10)' style='width:90%;' alt='The Great Barrier Reef')
+                div.c
+                    img.demo.cursor(src='/images/Images/Australia_Cairns/C11.JPG' onclick='currentSlide(11)' style='width:90%;' alt='The Great Barrier Reef')
+
+    script
+        include ../public/javascripts/travel_cairns.js
+       
