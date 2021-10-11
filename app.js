@@ -19,10 +19,17 @@ db.once('open', function() {
 
 var indexRouter = require('./routes/index');
 var travelfacilitiesRouter = require('./routes/travelfacilities');
+var travelalbertaRouter = require('./routes/travelalberta');
+var travelbanffalbertaRouter = require('./routes/travelbanffalberta');
+var travelkananaskisalbertaRouter = require('./routes/travelkananaskisalberta');
+var travelcarselandalbertaRouter = require('./routes/travelcarselandalberta');
+var pubarticleelevenRouter = require('./routes/pubarticleeleven');
 var satwikiRouter = require('./routes/satwiki');
 var pubarticleRouter = require('./routes/pubarticle');
 var travel_cairnsRouter = require('./routes/travel_cairns');
 var travel_noosabeachRouter = require('./routes/travel_noosabeach');
+var travel_redcliffeRouter = require('./routes/travel_redcliffe');
+var travel_straddieislandRouter = require('./routes/travel_straddieisland');
 var pubarticleoneRouter = require('./routes/pubarticleone');
 var pubarticletwoRouter = require('./routes/pubarticletwo');
 var pubarticlethreeRouter = require('./routes/pubarticlethree');
@@ -35,7 +42,6 @@ var pubarticlenineRouter = require('./routes/pubarticlenine');
 var pubarticletenRouter = require('./routes/pubarticleten');
 var pubarticleelevenRouter = require('./routes/pubarticleeleven');
 var feedbacksRouter = require('./routes/feedbacks');
-
 
 var app = express();
 
@@ -57,10 +63,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/', travelfacilitiesRouter);
+app.use('/', travelalbertaRouter);
+app.use('/', travelbanffalbertaRouter);
+app.use('/', travelkananaskisalbertaRouter);
+app.use('/', travelcarselandalbertaRouter);
 app.use('/', satwikiRouter);
 app.use('/', pubarticleRouter);
 app.use('/', travel_cairnsRouter);
 app.use('/', travel_noosabeachRouter);
+app.use('/', travel_redcliffeRouter);
+app.use('/', travel_straddieislandRouter);
 app.use('/', pubarticleoneRouter);
 app.use('/', pubarticletwoRouter);
 app.use('/', pubarticlethreeRouter);
